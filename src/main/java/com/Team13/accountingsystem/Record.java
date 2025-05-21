@@ -7,7 +7,7 @@ public class Record {
 	private final LocalDateTime transactionDateTime;
 	private final Double transactionAmount;
 	private final String accountNo;
-	private final String accountName;
+	private final String accountName; //rem
 	private String transactionType;
 	private String description;
 	
