@@ -7,7 +7,7 @@ public class Record {
 	private final LocalDateTime transactionDateTime;
 	private final Double transactionAmount;
 	private final String accountNo;
-	private final String accountName; //rem
+	private final String accountName;
 	private String transactionType;
 	private String description;
 	
@@ -39,6 +39,11 @@ public class Record {
 		this.transactionType = transactionType;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return String.format("%10s %20s %10.2f %14s %14s %20s %20s\n", recID, 
+				transactionDateTime, transactionAmount, 
+				accountNo, accountName, transactionType, description);
+	}
 	
 }
