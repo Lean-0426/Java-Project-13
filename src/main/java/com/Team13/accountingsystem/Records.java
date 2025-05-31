@@ -5,6 +5,7 @@ import java.util.stream.Collectors;
 import java.util.ArrayList;
 import java.util.Collections;
 
+// 하나의 bankAccount에 기록되는 Record의 list Records 
 public class Records {
 	public List<Record> records;
 	
@@ -30,6 +31,7 @@ public class Records {
 		return records.removeIf(record -> record.getID().equals(recID));
 	}
 	
+	// why needed?
 	public List<Record> getEmptyImmutableList() {
 		return Collections.emptyList();
 	}
@@ -40,6 +42,10 @@ public class Records {
 	
 	public List<String> getTransactionCategoryList() {
 		/* Through the stream function loop through records, map to transform record to the field category, 
+	// TransactionType의 종류를 리턴해주는 메소드.
+	// map을 사용 -> 중복제거. statics에 알맞은 방식?
+	//public List<String> getTransactionTypeList() {
+		/* Through the stream function loop through records, map to transform record to the field type, 
 		 * distinct to only get distinct results and collect it into a list */
 		List<String> transactionCategoryList = records.stream()
 				.map(Record::getTransactionCategory).distinct().collect(Collectors.toList());

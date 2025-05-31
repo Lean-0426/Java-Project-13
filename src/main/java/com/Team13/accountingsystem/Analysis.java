@@ -3,6 +3,7 @@ package com.Team13.accountingsystem;
 import java.util.ArrayList;
 import java.util.List;
 
+// 하나의 Records 분석 가장 비싼 소비, 가장 싼 소비, 소비 총량, 소비 평균
 /* Depending on the type of analysis available we might need to branch it out more */
 public class Analysis {
 	private List<Record> records;

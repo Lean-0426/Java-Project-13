@@ -48,10 +48,11 @@ public class BankAccount {
 	public Double getTotalAmount() {
 		return this.totalAmount;
 	}
-	
-	
+
 	/* methods */
 	public Double calculateTotalAmount() {
 		return 0.0;
 	}
+
+	
 }
