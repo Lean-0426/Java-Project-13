@@ -12,7 +12,7 @@ public class RecordVisualiser2D{
 	public static void printTextRecords(List<List<Record>> d2Records) {
 		System.out.println("Analysis Result: ");
 		for (List<Record> records : d2Records) {
-			System.out.println(records.getFirst().getTransactionType() + ":");
+			System.out.println(records.getFirst().getTransactionCategory() + ":");
 			printHeadings();
 			for (Record record : records) {
 				printTextRecord(record);
@@ -24,7 +24,7 @@ public class RecordVisualiser2D{
 	public static void printTextRecord(Record r) {
 		System.out.printf("%10s %20s %10.2f %14s %14s %20s %20s\n", r.getID(), 
 				formatDateTime(r.getTransactionDateTiem()), r.getTransactionAmount(), 
-				r.getAccountNo(), r.getAccountName(), r.getTransactionType(), r.getDescription());
+				r.getAccountNo(), r.getAccountName(), r.getTransactionCategory(), r.getDescription());
 	}
 	
 	public static void printAnalysis(Analysis a) {
@@ -36,7 +36,7 @@ public class RecordVisualiser2D{
 	}
 	
 	private static void printHeadings() {
-		System.out.printf("%10s %20s %10s %14s %14s %20s %20s\n", "Record ID", "Date/Time", "Amount", "Account No.", "Account Name", "Transasction Type", "Description");
+		System.out.printf("%10s %20s %10s %14s %14s %20s %20s\n", "Record ID", "Date/Time", "Amount", "Account No.", "Account Name", "Transasction Category", "Description");
 	}
 	
 	// second needed?

@@ -40,14 +40,16 @@ public class Records {
 		return records;
 	}
 	
+	public List<String> getTransactionCategoryList() {
+		/* Through the stream function loop through records, map to transform record to the field category, 
 	// TransactionType의 종류를 리턴해주는 메소드.
 	// map을 사용 -> 중복제거. statics에 알맞은 방식?
-	public List<String> getTransactionTypeList() {
+	//public List<String> getTransactionTypeList() {
 		/* Through the stream function loop through records, map to transform record to the field type, 
 		 * distinct to only get distinct results and collect it into a list */
-		List<String> transactionTypeList = records.stream()
-				.map(Record::getTransactionType).distinct().collect(Collectors.toList());
-		return transactionTypeList;
+		List<String> transactionCategoryList = records.stream()
+				.map(Record::getTransactionCategory).distinct().collect(Collectors.toList());
+		return transactionCategoryList;
 	}
 	
 	
