@@ -1,7 +1,6 @@
 package com.Team13.accountingsystem;
 
-public class App 
-{
+public class App //ddd
     public static void main( String[] args )
     {
     	/* Setup (read the file upon program start */
@@ -13,10 +12,10 @@ public class App
     	// Setup the index for fast retrieving of data
     	RecordIndex recordIndex = new RecordIndex(records.getAllRecords());
     	// Might need to update as we include more functions into the request handler
-    	RequestHandler requestHandler = new RequestHandler(recordIndex,records.getTransactionTypeList());
+    	RequestHandler requestHandler = new RequestHandler(recordIndex,records.getTransactionCategoryList());
         
     	/* Option selected: Analyse by type/category */
     	RecordVisualiser2D.printAnalysis(requestHandler.getSummaryAnalysisData(records.getAllRecords(), "All Transactions"));
-    	RecordVisualiser2D.printTextRecords(requestHandler.sortByType());
+    	RecordVisualiser2D.printTextRecords(requestHandler.sortByCategory());
     }
 }

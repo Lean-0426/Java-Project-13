@@ -38,12 +38,12 @@ public class Records {
 		return records;
 	}
 	
-	public List<String> getTransactionTypeList() {
-		/* Through the stream function loop through records, map to transform record to the field type, 
+	public List<String> getTransactionCategoryList() {
+		/* Through the stream function loop through records, map to transform record to the field category, 
 		 * distinct to only get distinct results and collect it into a list */
-		List<String> transactionTypeList = records.stream()
-				.map(Record::getTransactionType).distinct().collect(Collectors.toList());
-		return transactionTypeList;
+		List<String> transactionCategoryList = records.stream()
+				.map(Record::getTransactionCategory).distinct().collect(Collectors.toList());
+		return transactionCategoryList;
 	}
 	
 	

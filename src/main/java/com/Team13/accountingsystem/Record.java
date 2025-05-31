@@ -8,18 +8,18 @@ public class Record {
 	private final Double transactionAmount;
 	private final String accountNo;
 	private final String accountName; //rem
-	private String transactionType;
+	private String transactionCategory;
 	private String description;
 	
 	// Methods
 	// Constructors
-	public Record(Integer recID, LocalDateTime transactionDateTime, Double transactionAmount, String accountNo, String accountName, String transactionType, String description) {
+	public Record(Integer recID, LocalDateTime transactionDateTime, Double transactionAmount, String accountNo, String accountName, String transactionCategory, String description) {
 		this.recID = recID;
 		this.transactionDateTime = transactionDateTime;
 		this.transactionAmount = transactionAmount;
 		this.accountNo = accountNo;
 		this.accountName = accountName;
-		this.transactionType = transactionType;
+		this.transactionCategory = transactionCategory;
 		this.description = description;
 	}
 	
@@ -34,9 +34,9 @@ public class Record {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public String getTransactionType() {return this.transactionType;}
-	public void setTransactionType(String transactionType) {
-		this.transactionType = transactionType;
+	public String getTransactionCategory() {return this.transactionCategory;}
+	public void setTransactionCategory(String transactionCategory) {
+		this.transactionCategory = transactionCategory;
 	}
 	
 	
