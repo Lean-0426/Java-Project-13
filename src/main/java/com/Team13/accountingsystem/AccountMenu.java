@@ -1,5 +1,5 @@
 package com.Team13.accountingsystem;
-
+// add annotation to test commit push pull
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
@@ -33,6 +33,8 @@ public class AccountMenu {
         for (int i = 0; i < accountNames.size(); i++) {
             System.out.printf("[%d] %s\n", i + 1, accountNames.get(i));
         }
+        //System.out.println("[+] 계좌 추가");
+        
 
         // 3. 사용자 선택 입력 받기
         System.out.print("번호를 입력하세요: ");
