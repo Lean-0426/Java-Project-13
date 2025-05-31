@@ -52,6 +52,6 @@ public class BankAccount {
 	
 	/* methods */
 	public Double calculateTotalAmount() {
-		
+		return 0.0;
 	}
 }

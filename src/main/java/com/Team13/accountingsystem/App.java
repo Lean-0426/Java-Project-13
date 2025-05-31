@@ -1,6 +1,6 @@
 package com.Team13.accountingsystem;
 
-public class App //ddd
+public class App {
     public static void main( String[] args )
     {
     	/* Setup (read the file upon program start */
