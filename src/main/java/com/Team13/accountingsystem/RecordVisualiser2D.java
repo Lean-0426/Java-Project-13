@@ -8,6 +8,7 @@ import java.time.format.DateTimeFormatter;
 
 public class RecordVisualiser2D{
 	
+	// TransactionType 별로 출력을 위해 List<List<Record>> type
 	public static void printTextRecords(List<List<Record>> d2Records) {
 		System.out.println("Analysis Result: ");
 		for (List<Record> records : d2Records) {
@@ -38,6 +39,7 @@ public class RecordVisualiser2D{
 		System.out.printf("%10s %20s %10s %14s %14s %20s %20s\n", "Record ID", "Date/Time", "Amount", "Account No.", "Account Name", "Transasction Category", "Description");
 	}
 	
+	// second needed?
 	private static String formatDateTime(LocalDateTime dt) {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 		String dtFormatted = dt.format(formatter);

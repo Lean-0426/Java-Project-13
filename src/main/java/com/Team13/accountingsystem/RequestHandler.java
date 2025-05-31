@@ -3,7 +3,7 @@ package com.Team13.accountingsystem;
 import java.util.List;
 import java.util.ArrayList;
 
-
+// RecordIndex를 가져와 요청 처리하는 클래스
 public class RequestHandler {
 	private final RecordIndex recordIndex;
 	private List<String> transactionCategoryList;
@@ -15,6 +15,7 @@ public class RequestHandler {
 	
 	public List<Record> requestForCategory(String Category) {
 		List<Record> records = recordIndex.getByCategory(Category);
+	// 특정 Type의 transaction이 있는지 확인하는 메소드
 		if (records.isEmpty()) {
 			System.out.printf("There are no such transactions with Category: %s\n", Category);
 			return records;
@@ -23,7 +24,7 @@ public class RequestHandler {
 			return records;
 		}
 	}
-	
+
 	public List<List<Record>> sortByCategory() {
 		List<List<Record>> recordsByCategory = new ArrayList<List<Record>>(); 
 		for (String Category : this.transactionCategoryList) {
