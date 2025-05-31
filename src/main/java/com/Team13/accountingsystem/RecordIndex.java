@@ -15,6 +15,7 @@ public class RecordIndex {
 		buildIndexes();
 	}
 	
+	// allRecords의 레코드들을 TransactionType을 key, list를 value로 grouping하여 TypeIndex라는 Map 형성
 	private void buildIndexes() {
 		for (Record r : allRecords) {
 			/* Index by type */
@@ -22,13 +23,14 @@ public class RecordIndex {
 		}
 	}
 	
+	// why safe? 
 	public List<Record> getByType(String type) {
 		/** performs a safe lookup to a map (typeIndex), returns value (arraylist) of the key (type) if exists 
 		 	and defaultValue (immutable empty list, from collections.emptyList, prevents NullPointer exception) if not */ 
 		return typeIndex.getOrDefault(type, Collections.emptyList());
 	}
 	
-	
+	// add record and add it to typeIndex
 	public void addRecordIndex(Record r) {
 		/* updates the index structures */
 		allRecords.add(r);
