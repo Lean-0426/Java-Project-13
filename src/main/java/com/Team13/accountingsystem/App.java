@@ -4,7 +4,7 @@ public class App {
     public static void main( String[] args )
     {
     	/* Setup (read the file upon program start */
-    	
+    	//hi
     	String filePath = "datasets/testdata1.csv";
     	CSVFileHandler csvFileHandler = new CSVFileHandler(filePath);
     	// Records to handle add data, remove data, etc. 
